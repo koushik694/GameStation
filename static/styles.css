@@ -1,0 +1,741 @@
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(155deg, #650000, #050303);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the logo and the website name */
+    }
+
+.img {
+  width: 50px;  /* Adjust width */
+  height: 50px; /* Adjust height */
+  object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+}
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .get-started {
+      background: #650000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+
+    }
+
+    .hero-buttons button,
+    .hero-buttons a {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .hero-buttons button {
+      background: #650000;
+      color: white;
+      border-color: #ff4d4d;
+    }
+
+    .hero-buttons button:hover {
+      background: transparent;
+      color: #ff4d4d;
+    }
+
+    .hero-buttons a {
+      background: transparent;
+      color: white;
+      border: 2px solid #ff4d4d;
+      text-decoration:none;
+    }
+
+    .hero-buttons a:hover {
+      background: #ff4d4d;
+      color: white;
+    }
+
+    .hero-image {
+      max-width: 40%;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 15px;
+      border: 2px solid #ff4d4d;
+    }
+
+    /* Stats Section */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .stats div {
+      font-size: 1.2rem;
+    }
+
+    .stats div span {
+      display: block;
+      font-size: 2rem;
+      color: #650000;
+      font-weight: bold;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero-image {
+        max-width: 80%;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.facebook {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+}
+
+.instagram {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+.twitter {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg');
+}
+
+.youtube {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png');
+}
+
+.github {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg');
+  background-color: #fff; /* To make it more visible */
+  border-radius: 50%;
+}
+
+/* about us */
+main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2em;
+      color: #0f0606; /* Blue for headings */
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .history img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /*collections*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Game List Styling */
+.game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Game Card Styling */
+.game-card {
+    display: flex;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.game-rank {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.game-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.game-details {
+    flex-grow: 1;
+}
+
+.game-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #650000;
+}
+
+.game-summary {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Action Buttons */
+.game-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 8px 12px;
+    background-color: #650000;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #fff;
+}
+
+
+
+
+/*login-page*/
+.login-container, .signup-container {
+    background-color: #000;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    margin-left:600px;
+    margin-top:30px;
+    margin-bottom:20px;
+
+}
+
+.signup-container {
+    background-color: #000;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    margin-left:600px;
+    margin-top:30px;
+    margin-bottom:100px;
+
+}
+
+.login-form h1 , .signup-form{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #650000;
+}
+
+.login-form p , .signup-form{
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #c4c4d4;
+}
+
+.login-form label, .signup-form label {
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.login-form input, .signup-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: #1a1a40;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.login-form input::placeholder , .signup-form {
+    color: #c4c4d4;
+}
+
+.login-btn, .signup-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-btn:hover , .signup-btn:hover {
+    background-color: #ff6666;
+}
+
+.login-footer, .signup-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-footer a:hover {
+    color:#ff6666;
+}
+
+.login-img{
+display:flex;
+}
+
+/*sort*/
+.sort{
+color: #000;
+font-size: 20px;
+margin-left:50px;
+}
+
+.option{
+border-radius:10px;
+width:150px;
+height:30px;
+color:#fff;
+background-color:#650000;
+font-size:16px;
+text-align:center;
+}
+
+.sort-btn{
+margin-left: 25px;
+margin-bottom: 15px;
+height:30px;
+width:70px;
+border-radius:10%;
+background-color: #000;
+color:#fff;
+transition: background-color 0.3s ease;
+}
+
+.sort-btn:hover {
+cursor:pointer;
+background-color: grey;
+}
+
+/*connect*/
+
+a.get-started {
+  color: white;
+  background-color: #65000;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #650000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Connect with Us Page Styles */
+.connect-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #650000;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.connect-container h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.connect-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.connect-container input, .connect-container textarea {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.connect-container button {
+  background-color: #650000;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Admin Feedback Page Styles */
+.admin-feedback-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-feedback-container h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.feedback-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feedback-item {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .connect-container, .admin-feedback-container {
+    width: 90%;
+  }
+}
+
+/* Add Game Form Container */
+.add-game-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #000;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.add-game-container h1 {
+  text-align: center;
+  color: #650000;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Inputs Styling */
+.add input.data {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+/* File Input Styling */
+.add input[type="file"] {
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #ddd;
+}
+
+/* Button Styling */
+.add .submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #650000;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add .submit-btn:hover {
+  background-color: #650000;
+}
+
+/* Link Styling */
+.add a {
+  text-decoration: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .add-game-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .add input.data {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .add .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+   /*edit*/
+
+/* Edit Game Form Container */
+.edit-game-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #000;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.edit-game-container h1 {
+  text-align: center;
+  color: #650000;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Inputs Styling */
+.edit input.data {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #650000;
+}
+
+/* File Input Styling */
+.edit input[type="file"] {
+  padding: 10px;
+  background-color: #650000;
+  border: 1px solid #ddd;
+}
+
+/* Button Styling */
+.edit .submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #650000;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit .submit-btn:hover {
+  background-color: #650000;
+}
+
+/* Link Styling */
+.edit a {
+  text-decoration: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .edit-game-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .edit input.data {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .edit .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+
+
+

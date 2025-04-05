@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title %}Feedback{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Admin Feedback Page Styles */
+    .admin-feedback-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .admin-feedback-container h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .feedback-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .feedback-item {
+      background-color: #000;
+      margin-top:20px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-item p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .connect-container, .admin-feedback-container {
+        width: 90%;
+      }
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="img"src="https://img.icons8.com/?size=100&id=0FvHf0Nf8v0t&format=png&color=000000">
+      <div class="logo"> Game$tation</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/collections">Collections</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="/login" class="get-started">Log in</a>
+  </header>
+  <div class="admin-feedback-container">
+    <h1>Admin - View Feedback</h1>
+
+    {% if feedbacks %}
+      <ul class="feedback-list">
+        {% for feedback in feedbacks %}
+          <li class="feedback-item">
+            <p><strong>{{ feedback.username }}</strong> said:</p>
+            <p>{{ feedback.feedback }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No feedback received yet.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
+
+
+

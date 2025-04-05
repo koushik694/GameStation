@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Game{% endblock %}
+
+{% block content %}
+<div class="add-game-container">
+    <h1>Add Game</h1>
+<form class="add" action="/add" enctype="multipart/form-data" method="POST">
+    <input class="data" type="file" name="image" placeholder="Game Image" required>
+    <input class="data" type="text" name="title" placeholder="Game Title" required>
+    <input class="data" type="number" name="release" placeholder="Release Year" required>
+    <input class="data" type="text" name="team" placeholder="Team" required>
+    <input class="data" type="text" name="rating" placeholder="Rating" required>
+    <input class="data" type="text" name="listed" placeholder="Times listed" required>
+    <input class="data" type="text" name="no_reviews" placeholder="No. of reviews" required>
+    <input class="data" type="text" name="genres" placeholder="Genres" required>
+    <input class="data" type="text" name="summary" placeholder="Summary" required>
+    <input class="data" type="text" name="reviews" placeholder="Reviews" required>
+    <input class="data" type="text" name="place" placeholder="Plays" required>
+    <input class="data" type="text" name="playing" placeholder="Playing" required>
+    <input class="data" type="text" name="backlogs" placeholder="Backlogs" required>
+    <input class="data" type="text" name="wishlist" placeholder="Wishlist" required>
+   <a href="/collections"><button type="submit" class="submit-btn">Add Game</button></a>
+</form>
+    </div>
+{% endblock %}

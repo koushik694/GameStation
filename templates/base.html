@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title %} Game$tation{% endblock %}</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="img"src="https://img.icons8.com/?size=100&id=0FvHf0Nf8v0t&format=png&color=000000">
+      <div class="logo"> Game$tation</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+<!--        <li><a href="/collections">Collections</a></li>-->
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="/login" class="get-started">Log in</a>
+  </header>
+  {% block content %} {% endblock %}
+
+</body>
+</html>

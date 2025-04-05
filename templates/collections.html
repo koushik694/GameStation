@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Collections{% endblock %}
+
+{% block content %}
+
+
+<!--<a href="/add"><button type="submit">Add Game</button></a>-->
+<form method="GET" action="/collections" enctype="multipart/form-data">
+      <label class="sort" for="sort_by">Sort By:</label>
+      <select class="option" name="sort_by" id="sort_by">
+          <option  value="id">Id</option>
+        <option value="title">Alphabetical Order</option>
+        <option value="release">Year of Release</option>
+        <option value="rating">Rating</option>
+      </select>
+      <label class="sort" for="sort_order">Order:</label>
+      <select class="option" name="sort_order" id="sort_order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      <button class="sort-btn" type="submit">Apply</button>
+    </form>
+
+
+  <!-- Games Table -->
+   <div class="container">
+        <div class="game-list">
+            {% for game in games %}
+            <!-- Game Card Example -->
+            <div class="game-card">
+                <div class="game-rank">{{ game.id }}</div>
+                <div class="game-image">
+
+                    {% if game.image %}
+                    <img src="{{ url_for('static', filename='images/' + game.image) }}" alt="{{ game.title }}" style="width:200px;height:auto;">
+                {% else %}
+                    <p>No image available</p>
+                {% endif %}
+
+                </div>
+                <div class="game-details">
+                    <h2 class="game-title">{{ game.title }}</h2>
+                    <p><strong>Year:</strong> {{ game.release }} </p>
+                    <p><strong>Team:</strong> {{ game.team }}</p>
+                    <p><strong>Rating:</strong> {{ game.rating }}</p>
+                    <p><strong>Times Listed:</strong> {{ game.listed }}</p>
+                    <p><strong>Number of Reviews:</strong> {{ game.no_reviews }}</p>
+                    <p><strong>Genres:</strong> {{ game.genres }}</p>
+                    <p class="game-summary">{{ game.summary }}</p>
+                    <p class="game-summary">{{ game.reviews }}</p>
+                    <p><strong>Plays:</strong> {{ game.place }} |
+                        <strong>Playing:</strong> {{ game.playing }} |
+                        <strong>Backlogs:</strong> {{ game.backlogs }} |
+                        <strong>Wishlist:</strong> {{ game.wishlist }}</p>
+                    <div class="game-actions">
+<!--                        <button class="action-btn">Play</button>-->
+<!--                        <button class="action-btn">Wishlist</button>-->
+<!--                         <form action="/delete/{{ game.id }}" method="POST" style="display:inline;">-->
+<!--                         <button type="submit" class="action-btn">Delete</button>-->
+<!--                         </form>-->
+<!--                         <a href="/edit/{{ game.id }}">-->
+<!--                         <button type="button" class="action-btn">Edit</button></a>-->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

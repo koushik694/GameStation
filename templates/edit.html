@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Edit</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="img" src="https://img.icons8.com/?size=100&id=0FvHf0Nf8v0t&format=png&color=000000">
+      <div class="logo"> Game$tation</div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/collections">Collections</a></li>
+        <li><a href="/about">About Us</a></li>
+      </ul>
+    </nav>
+    <a href="/login" class="get-started">Log in</a>
+  </header>
+  <div class="edit-game-container">
+  <h1>Edit Game</h1>
+
+  <form action="/edit/{{ game.id }}" method="POST">
+      <input class="data" type="file" name="image" value="{{ game.image }}" required>
+    <input class="data" type="text" name="title" value="{{ game.title }}" required>
+    <input class="data" type="number" name="release" value="{{ game.release }}" required>
+    <input  class="data" type="text" name="team" value="{{ game.team }}" required> <br> <br>
+    <input class="data" type="text" name="rating" value="{{ game.rating }}" required>
+    <input class="data" type="text" name="listed" value="{{ game.listed }}" required>
+    <input class="data" type="text" name="no_reviews" value="{{ game.no_reviews }}" required> <br> <br>
+    <input class="data" type="text" name="genres" value="{{ game.genres }}" required>
+    <input class="data" type="text" name="summary" value="{{ game.summary }}" required>
+    <input class="data" type="text" name="reviews" value="{{ game.reviews }}" required> <br> <br>
+    <input class="data" type="text" name="place" value="{{ game.place }}" required>
+    <input class="data" type="text" name="playing" value="{{ game.playing }}" required>
+    <input class="data" type="text" name="backlogs" value="{{ game.backlogs }}" required> <br> <br>
+    <input class="data" type="text" name="wishlist" value="{{ game.wishlist }}" required>
+
+    <button type="submit" class="submit-btn">Save Changes</button>
+  </form>
+
+</body>
+</html>
+
